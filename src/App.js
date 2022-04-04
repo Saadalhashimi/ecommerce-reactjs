@@ -3,7 +3,7 @@ import Home from './routes/home/Home'
 import React from 'react'
 import { Routes,Route } from 'react-router-dom'
 import Navbar from "./routes/navigation/Navbar";
-import SignIn from './routes/sign-in/SignIn'
+import Authentication from './routes/authentication/Authentication'
 import './App.css'
 
 const Shop = ()=>{
@@ -20,7 +20,7 @@ const App = () => {
       <Routes>
        <Route path='/'  element={<Navbar />}>
       <Route index element={<Home />}/>
-      <Route path='/signIn' element={<SignIn/>}/>
+      <Route path='/auth' element={<Authentication/>}/>
       <Route path='/shop' element={<Shop/>}/>
       </Route> 
       </Routes>
