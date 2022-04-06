@@ -1,7 +1,6 @@
 import React, {Fragment} from 'react'
 
 const Image = ({category}) => {
-  console.log(category)
   return (
     <Fragment>
         {(category === "smartphones" && <img src={require('../assets/images/smartphones.jpg')} alt={category} />)

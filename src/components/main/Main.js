@@ -1,11 +1,16 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import Image from '../Image'
 
-const Main = ({products}) => {
+import { ProductsContext } from "../../context/ProductsContext";
+
+
+const Main = () => {
+  const products= useContext(ProductsContext)
+  console.log('products from main', products)
     const categories = [...new Set(products.map(product=>{
         return product.category
     }))]
-
+   
   return (
       <div className='categories-container'>
     {categories.map((category,i)=>{

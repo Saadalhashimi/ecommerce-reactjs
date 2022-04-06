@@ -30,12 +30,12 @@
         border: none;
       }
     
-.button-container .inverted {
+.inverted {
       background-color: white;
       color: black;
       border: 1px solid black;
 }
-.button-container .inverted:hover {
+.inverted:hover {
         background-color: black;
         color: white;
         border: none;

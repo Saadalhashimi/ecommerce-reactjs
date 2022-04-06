@@ -5,14 +5,7 @@ import { Routes,Route } from 'react-router-dom'
 import Navbar from "./routes/navigation/Navbar";
 import Authentication from './routes/authentication/Authentication'
 import './App.css'
-
-const Shop = ()=>{
-  return(
-    <div>
-    <h2>shop component</h2>
-    </div>
-  )
-}
+import Shop from './routes/shop/Shop';
 
 const App = () => {
   return (
