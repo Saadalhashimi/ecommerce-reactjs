@@ -16,9 +16,15 @@
     height: 240px;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
    
 }
 
 .dropdown-container button{
     margin-top: auto;
+}
+
+.message{
+    font-size: 15px;
+    margin: 50px auto;
 }
