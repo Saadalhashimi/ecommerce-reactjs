@@ -1,4 +1,5 @@
 import React,{useContext} from 'react'
+import { useNavigate } from 'react-router-dom';
 import Image from '../Image'
 
 import { ProductsContext } from "../../context/ProductsContext";
@@ -10,14 +11,21 @@ const Main = () => {
     const categories = [...new Set(products.map(product=>{
         return product.category
     }))]
+
+
+
+    const navigate = useNavigate()
+    const goToCategory = ()=>{
+      navigate(`/category/${categories[0]}`)
+     }
    
   return (
       <div className='categories-container'>
     {categories.map((category,i)=>{
         return(<div className='category-container' key ={i}>
               <Image className='background-image' category={category} />
-              <div className='category-body'>
-              <h2>{category}</h2>
+              <div className='category-body' onClick={goToCategory}>
+              <h2>{category.toUpperCase()}</h2>
               <p>Shop Now</p>
           </div>
         
