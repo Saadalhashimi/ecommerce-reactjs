@@ -1,5 +1,6 @@
 import { createContext,useState } from "react";
 
+export const CartContext = createContext()
 const addCartItem = (cartItems,productToAdd)=>{
     const existingCartItem = cartItems.find((cartItem)=> cartItem.id===productToAdd.id)
 
@@ -11,7 +12,6 @@ const addCartItem = (cartItems,productToAdd)=>{
     return [...cartItems,{...productToAdd,quantity:1}]
 
 }
-export const CartContext = createContext()
 
 
 export const CartProvider = ({children})=>{

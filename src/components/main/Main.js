@@ -12,11 +12,12 @@ const Main = () => {
         return product.category
     }))]
 
-
+    console.log('categories', categories)
 
     const navigate = useNavigate()
-    const goToCategory = ()=>{
-      navigate(`/category/${categories[0]}`)
+    const goToCategory = (e)=>{
+      console.log('e.target', e.currentTarget.id)
+      navigate(`/category/${e.currentTarget.id}`)
      }
    
   return (
@@ -24,7 +25,7 @@ const Main = () => {
     {categories.map((category,i)=>{
         return(<div className='category-container' key ={i}>
               <Image className='background-image' category={category} />
-              <div className='category-body' onClick={goToCategory}>
+              <div className='category-body' onClick={goToCategory} id={category}>
               <h2>{category.toUpperCase()}</h2>
               <p>Shop Now</p>
           </div>
